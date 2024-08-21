@@ -1,0 +1,14 @@
+[project]
+name = "py-rga-plotter"
+version = "0.1.0"
+description = "Liveplotting for GEMS_RGA serial data"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2.2",
+    "matplotlib>=3.9.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
