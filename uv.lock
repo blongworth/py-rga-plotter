@@ -284,8 +284,8 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "matplotlib" },
-    { name = "pandas" },
+    { name = "matplotlib", specifier = ">=3.9.2" },
+    { name = "pandas", specifier = ">=2.2.2" },
 ]
 
 [[package]]

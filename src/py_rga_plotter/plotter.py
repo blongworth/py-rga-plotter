@@ -3,9 +3,8 @@ import matplotlib.dates as mdates
 import pandas as pd
 import time
 from datetime import datetime
-
-# File to be monitored
-file_path = 'data/GEMS_tests/SerialCapture/GEMS_full_SMURP_NF0_2024-04-22.txt'
+import argparse
+import os
 
 # Dictionary to hold data for each mass
 data_dict = {}
@@ -98,6 +97,9 @@ def monitor_file(file_path):
 
 if __name__ == "__main__":
     plt.ion()  # Enable interactive mode for real-time plotting
-    initial_plot(file_path)
-    monitor_file(file_path)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('file_path', type=str, help='Path to the file to plot')
+    args = parser.parse_args()
+    initial_plot(args.file_path)
+    monitor_file(args.file_path)
 
